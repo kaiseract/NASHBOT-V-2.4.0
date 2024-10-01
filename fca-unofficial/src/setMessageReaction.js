@@ -24,13 +24,11 @@ module.exports = function(defaultFuncs, api, ctx) {
     switch (reaction) {
       case "\uD83D\uDE0D": //:heart_eyes:
       case "\uD83D\uDE06": //:laughing:
-      case "\uD83D\uDE2E": //:open_mouth:
       case "\uD83D\uDE22": //:cry:
       case "\uD83D\uDE20": //:angry:
       case "\uD83D\uDC4D": //:thumbsup:
       case "\uD83D\uDC4E": //:thumbsdown:
-      case "\u2764": //:heart:
-      case "\uD83D\uDC97": //:glowingheart:
+      case "\u2764\ufe0f": //:heart:
       case "":
         //valid
         break;
@@ -42,13 +40,9 @@ module.exports = function(defaultFuncs, api, ctx) {
       case ":haha:":
         reaction = "\uD83D\uDE06";
         break;
-      case ":open_mouth:":
-      case ":wow:":
-        reaction = "\uD83D\uDE2E";
-        break;
       case ":cry:":
       case ":sad:":
-        reaction = "\uD83D\uDE22";
+        reaction = "\ud83d\ude2d";
         break;
       case ":angry:":
         reaction = "\uD83D\uDE20";
@@ -62,10 +56,7 @@ module.exports = function(defaultFuncs, api, ctx) {
         reaction = "\uD83D\uDC4E";
         break;
       case ":heart:":
-        reaction = "\u2764";
-        break;
-      case ":glowingheart:":
-        reaction = "\uD83D\uDC97";
+        reaction = "\u2764\ufe0f";
         break;
       default:
         if (forceCustomReaction) {
